@@ -38,4 +38,23 @@ Dimension Tables
 
 - Top 50 songs played in 2021.
 
-- Top paid users with the most play records.
+select 
+    s.title as song_name,  
+    count(f.songplay_id) as play_times
+from f_songplay f
+left join d_songs s on s.song_id = f.song_id
+left join d_time t on t.start_time = f.start_time
+where t.year = 2021
+order by play_times desc
+limit 50
+
+- Popular artists among paid users.
+select 
+    a.name as artist_name,  
+    count(f.songplay_id) as play_times
+from f_songplay f
+left join d_users u on u.user_id = f.user_id
+left join d_artists a on a.artist_id = f.artist_id
+where u.level = 'paid'
+order by play_times desc
+limit 100
