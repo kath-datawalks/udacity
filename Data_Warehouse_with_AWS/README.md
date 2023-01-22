@@ -11,6 +11,7 @@ The two source datasets are in JSON format residng in S3. The song dataset inclu
 ### Database Schema Design
 
 A star schema is designed to optimize data analysis.
+![image](https://github.com/kath-datawalks/udacity/blob/main/Data_Warehouse_with_AWS/Star%20Shema.png)
 
 Fact Table
 1. f_songplays - records in event data associated with song plays i.e. records with page NextSong
