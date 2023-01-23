@@ -50,6 +50,7 @@ order by play_times desc
 limit 50
 
 - Popular artists among paid users.
+
 select 
     a.name as artist_name,  
     count(f.songplay_id) as play_times
