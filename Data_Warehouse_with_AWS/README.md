@@ -1,7 +1,3 @@
-Discuss the purpose of this database in context of the startup, Sparkify, and their analytical goals.
-State and justify your database schema design and ETL pipeline.
-[Optional] Provide example queries and results for song play analysis.
-
 ### Project Background
 
 This project aims to build an ETL pipeline that extracts Sparkify's data from S3, stages them in Redshift, and transforms data into a set of dimensional tables for their analytics team to continue finding insights into what songs are users are listening to.
