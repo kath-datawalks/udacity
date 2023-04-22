@@ -18,7 +18,7 @@ This project will gather the data from 3 datasets.
 
 # Model
 
-Please refer to the model_view file in the folder for the conceptual model.
+![image](https://github.com/kath-datawalks/udacity/blob/main/Capstone%20project/model_view.png)
 
 ### Four dimension tables and two fact tables comprise of the model.
 
@@ -72,3 +72,11 @@ US state dimension comes from the U.S. City Demographic Data dataset:
 The database needed to be accessed by 100+ people. 
    The ETL pipeline has to be automated and easy to be debugged. Thus I would adopt the Apache Airflow to ensure that the pipeline will run on accurately schedules and can be monitored on smaller task basis. It is also easy for collaboration.
    If the databse need to be accessed by 100+ people at the same time, I would suggest migrate it to Amazon redshift cluster which offers fast query performance.
+   
+# An example query using the model
+
+For instance a data analyst wants to see if there is a trend in immigration applications relating to the income equality, one of the indicators of a country's social and financial development. Below is an example query that utilizes t2o fact tables in the model and 2 relative dimension tables.
+
+![image](https://github.com/kath-datawalks/udacity/blob/main/Capstone%20project/Example%20query%20result.png)
+
+Results show that apart from neighbor countries like Brazil and Columbia, the top immigration origin countries such as the UK, China and France all have lower Gini index values, implying lower income equality.
