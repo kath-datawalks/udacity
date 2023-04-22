@@ -1,0 +1,69 @@
+Data Dictionary
+
+-----------------
+fact_immigraion
+-----------------
+* file_id - Unique record ID 
+* residence_country_code - 3 digit code for immigrant country of residence 
+* birth_country_code - 3 digit code for immigrant country of birth 
+* admission_port_code - admission port code
+* arrdate - arrival date in the USA. It is a SAS date numeric field
+* arrival_state_code - arrival state code
+* departure_date_sas - date of departure
+* applicant_age - applicant's age
+* applicant_birth_year - applicant's birth year
+* applicant_gender - applicant gender
+* visa_type_code - code for visa type
+* arrival_flag - admitted or paroled into the U.S. 
+* departure_flag - departed from U.S. or not
+* airline - Airline used to arrive in U.S. 
+* admission_number - admission number
+* flight_number - flight number of Airline used to arrive in U.S. 
+
+-----------------
+dim_us_state
+-----------------
+* ID - primary key
+* state - name of the U.S. state
+* state_code - code of the state
+* median_age - median age of the state's population
+* total_population - state's total population
+* average_household_size - state's average household size
+
+-----------------
+dim_visa_type
+-----------------
+* ID - primary key
+* visa_type_code - code for visa type
+* visa_type - Visa codes collapsed into three categories:
+    - 1 = Business
+    - 2 = Pleasure
+    - 3 = Student
+
+-----------------
+dim_date
+-----------------
+* ID - primary key
+* arrdate - arrival date in the USA. It is a SAS date numeric field
+* arrival date - date in yyyy-mm-dd format
+* day - one or two digits number of arrival date
+* day: Day of arrival
+* month: Month of arrival
+* year: Year of arrival
+* week: Week of arrival
+* weekday: Day of week of arrival
+
+-----------------
+dim_from_country
+-----------------
+* ID - primary key
+* country_name - name of immigrant origin country of residence
+* country_code - 3 digit code of immigrant origin country of residence
+
+-----------------
+fact_gini_index
+-----------------
+* ID - primary key
+* country_name - name of country
+* year - year of Gini index evaluation
+* index_value - Gini index value
