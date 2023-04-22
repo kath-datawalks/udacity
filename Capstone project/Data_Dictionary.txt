@@ -3,17 +3,17 @@ Data Dictionary
 -----------------
 fact_immigraion
 -----------------
-* file_id - Unique record ID 
-* residence_country_code - 3 digit code for immigrant country of residence 
+* file_id - Unique record ID, primary key 
+* residence_country_code - 3 digit code for immigrant country of residence, FK to country_code in dim_from_country. 
 * birth_country_code - 3 digit code for immigrant country of birth 
 * admission_port_code - admission port code
-* arrdate - arrival date in the USA. It is a SAS date numeric field
-* arrival_state_code - arrival state code
+* arrdate - arrival date in the USA. It is a SAS date numeric field，FK to arrdate in dim_date.
+* arrival_state_code - arrival state code, FK to state_code in dim_us_state.
 * departure_date_sas - date of departure
 * applicant_age - applicant's age
 * applicant_birth_year - applicant's birth year
 * applicant_gender - applicant gender
-* visa_type_code - code for visa type
+* visa_type_code - code for visa type, FK to visa_type_code in dim_visa_type
 * arrival_flag - admitted or paroled into the U.S. 
 * departure_flag - departed from U.S. or not
 * airline - Airline used to arrive in U.S. 
