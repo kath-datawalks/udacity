@@ -212,7 +212,7 @@ def create_fact_gini_index(spark, input_df, output_path):
     df = spark.sql(
         """
         select
-            distinct country_name, year, value as index_value
+            distinct UPPER(country_name) AS country_name, year, value as index_value
         from gini_view
         """
     )
